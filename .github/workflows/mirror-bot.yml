@@ -6,7 +6,7 @@ env:
  username: CyberJalagam
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
        - name: Checkout
@@ -52,7 +52,7 @@ jobs:
        - name: Loop workflow
          continue-on-error: true
          run: |
-              git clone https://github.com/$username/MirrorMAX-workflow loop
+              git clone https://github.com/technorubix/MirrorMAX-workflow loop
               cd loop
               echo "1" >> loop.txt
               git add loop.txt
